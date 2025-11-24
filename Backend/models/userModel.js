@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-import { trim } from "validator";
+
 
 const userSchema = new mongoose.Schema({
     name: {
@@ -16,11 +16,11 @@ const userSchema = new mongoose.Schema({
     },
     password: {
         type: String,
-        required: true,
+        required: true
     },
 }, {
     timestamps: true
 }
-);
+)  
 
 export default mongoose.models.User || mongoose.model('User',userSchema);
