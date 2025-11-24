@@ -1,6 +1,7 @@
 import express from 'express'; // Importing the Express framework
 import cors from 'cors'; // Importing CORS middleware
 import "dotenv/config"; // Importing dotenv to manage environment variables
+import { connectDB } from './config/db.js';
 
 const app = express();
 const port = 4000; // Defining the port number
@@ -12,7 +13,7 @@ app.use(express.urlencoded({ extended: true }));  // Parsing JSON and URL-encode
 
 
 //Define Database Connection
-
+connectDB();  
 
 
 // Define Routes
